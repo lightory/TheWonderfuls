@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddNewWonderViewController : UIViewController
-@property (nonatomic,weak) UITextField *inputWonder;
+@interface AddNewWonderViewController : UIViewController<UITextFieldDelegate>
+@property (nonatomic,retain) UITextField *wonderTF;
 @end

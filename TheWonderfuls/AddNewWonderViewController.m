@@ -9,7 +9,7 @@
 #import "AddNewWonderViewController.h"
 
 @implementation AddNewWonderViewController
-@synthesize inputWonder = _inputWonder;
+@synthesize wonderTF = _wonderTF;
 
 - (void)didReceiveMemoryWarning
 {
@@ -27,16 +27,16 @@
     self.view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    //Edit button
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
-    [self.navigationItem setRightBarButtonItem:saveButton];
-    
     //Input new wonder
-    UITextField *inputWonderTF = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, 320, 320)];
-    inputWonderTF.borderStyle = UITextBorderStyleRoundedRect;
-    self.inputWonder = inputWonderTF;
-    [self.view addSubview:inputWonderTF];
+    _wonderTF = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, 320, 320)];
+    _wonderTF.borderStyle = UITextBorderStyleRoundedRect;
+    _wonderTF.delegate = self;
+    [self.view addSubview:_wonderTF];
     
+    //Edit button
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
+    [self.navigationItem setRightBarButtonItem:saveButton];
+
     
      
 }
@@ -63,10 +63,17 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)saveAction
+
+
+
+- (void)save
 {
-    NSString *wonderText = self.inputWonder.text;
-    
+    [_wonderTF resignFirstResponder];
+    NSString *wonderText = _wonderTF.text;
+    NSString *wonderKey = [NSDate description];
+    [[NSUserDefaults standardUserDefaults] setObject:wonderText forKey:wonderKey];
+    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:wonderKey]);
 }
+
 
 @end

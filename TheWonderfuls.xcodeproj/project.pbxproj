@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21379A45156157F10036CB40 /* Wonderful.m in Sources */ = {isa = PBXBuildFile; fileRef = 21379A44156157F10036CB40 /* Wonderful.m */; };
 		21EA1C11155FCB58000B974E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EA1C10155FCB58000B974E /* UIKit.framework */; };
 		21EA1C13155FCB58000B974E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EA1C12155FCB58000B974E /* Foundation.framework */; };
 		21EA1C15155FCB58000B974E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EA1C14155FCB58000B974E /* CoreGraphics.framework */; };
@@ -24,8 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		21379A43156157F00036CB40 /* Wonderful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wonderful.h; sourceTree = "<group>"; };
-		21379A44156157F10036CB40 /* Wonderful.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wonderful.m; sourceTree = "<group>"; };
 		21EA1C0C155FCB58000B974E /* TheWonderfuls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWonderfuls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EA1C10155FCB58000B974E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21EA1C12155FCB58000B974E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,8 +97,6 @@
 				21EA1C39155FD282000B974E /* AddNewWonderViewController.m */,
 				21EA1C2C155FCB58000B974E /* TheWonderfulsSecondViewController.h */,
 				21EA1C2D155FCB58000B974E /* TheWonderfulsSecondViewController.m */,
-				21379A43156157F00036CB40 /* Wonderful.h */,
-				21379A44156157F10036CB40 /* Wonderful.m */,
 				21EA1C28155FCB58000B974E /* first.png */,
 				21EA1C2A155FCB58000B974E /* first@2x.png */,
 				21EA1C2F155FCB58000B974E /* second.png */,
@@ -193,7 +188,6 @@
 				21EA1C27155FCB58000B974E /* TheWonderfulsFirstViewController.m in Sources */,
 				21EA1C2E155FCB58000B974E /* TheWonderfulsSecondViewController.m in Sources */,
 				21EA1C3A155FD282000B974E /* AddNewWonderViewController.m in Sources */,
-				21379A45156157F10036CB40 /* Wonderful.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
