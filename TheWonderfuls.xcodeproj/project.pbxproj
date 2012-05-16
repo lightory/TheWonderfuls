@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21379A5E1563EB630036CB40 /* wonders.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21379A5D1563EB630036CB40 /* wonders.plist */; };
 		21EA1C11155FCB58000B974E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EA1C10155FCB58000B974E /* UIKit.framework */; };
 		21EA1C13155FCB58000B974E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EA1C12155FCB58000B974E /* Foundation.framework */; };
 		21EA1C15155FCB58000B974E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EA1C14155FCB58000B974E /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21379A5D1563EB630036CB40 /* wonders.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wonders.plist; sourceTree = "<group>"; };
 		21EA1C0C155FCB58000B974E /* TheWonderfuls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWonderfuls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EA1C10155FCB58000B974E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21EA1C12155FCB58000B974E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +61,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21379A5B1563E5F00036CB40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21EA1C25155FCB58000B974E /* TheWonderfulsFirstViewController.h */,
+				21EA1C26155FCB58000B974E /* TheWonderfulsFirstViewController.m */,
+				21EA1C38155FD282000B974E /* AddNewWonderViewController.h */,
+				21EA1C39155FD282000B974E /* AddNewWonderViewController.m */,
+				21EA1C2C155FCB58000B974E /* TheWonderfulsSecondViewController.h */,
+				21EA1C2D155FCB58000B974E /* TheWonderfulsSecondViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		21379A5C1563EAF40036CB40 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				21EA1C2F155FCB58000B974E /* second.png */,
+				21EA1C31155FCB58000B974E /* second@2x.png */,
+				21EA1C28155FCB58000B974E /* first.png */,
+				21EA1C2A155FCB58000B974E /* first@2x.png */,
+				21379A5D1563EB630036CB40 /* wonders.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		21EA1C01155FCB58000B974E = {
 			isa = PBXGroup;
 			children = (
@@ -91,16 +118,8 @@
 			children = (
 				21EA1C1F155FCB58000B974E /* TheWonderfulsAppDelegate.h */,
 				21EA1C20155FCB58000B974E /* TheWonderfulsAppDelegate.m */,
-				21EA1C25155FCB58000B974E /* TheWonderfulsFirstViewController.h */,
-				21EA1C26155FCB58000B974E /* TheWonderfulsFirstViewController.m */,
-				21EA1C38155FD282000B974E /* AddNewWonderViewController.h */,
-				21EA1C39155FD282000B974E /* AddNewWonderViewController.m */,
-				21EA1C2C155FCB58000B974E /* TheWonderfulsSecondViewController.h */,
-				21EA1C2D155FCB58000B974E /* TheWonderfulsSecondViewController.m */,
-				21EA1C28155FCB58000B974E /* first.png */,
-				21EA1C2A155FCB58000B974E /* first@2x.png */,
-				21EA1C2F155FCB58000B974E /* second.png */,
-				21EA1C31155FCB58000B974E /* second@2x.png */,
+				21379A5B1563E5F00036CB40 /* Controller */,
+				21379A5C1563EAF40036CB40 /* Resource */,
 				21EA1C17155FCB58000B974E /* Supporting Files */,
 			);
 			path = TheWonderfuls;
@@ -173,6 +192,7 @@
 				21EA1C2B155FCB58000B974E /* first@2x.png in Resources */,
 				21EA1C30155FCB58000B974E /* second.png in Resources */,
 				21EA1C32155FCB58000B974E /* second@2x.png in Resources */,
+				21379A5E1563EB630036CB40 /* wonders.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

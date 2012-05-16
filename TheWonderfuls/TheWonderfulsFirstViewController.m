@@ -10,7 +10,7 @@
 #import "AddNewWonderViewController.h"
 
 @implementation TheWonderfulsFirstViewController
-
+@synthesize wonderList = _wonderList;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -29,6 +29,10 @@
     [button addTarget:self action:@selector(addNewWonder) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
+    //Add wonder list
+    _wonderList = [[UITableView alloc]initWithFrame:CGRectMake(0, 160, 320, 300) style:UITableViewStylePlain];
+    [self.view addSubview:_wonderList];
+    
     //Tab bar item
     UITabBarItem *tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Wonderfuls" image:[UIImage imageNamed:@"first.png"] tag:0];
     self.tabBarItem = tabBarItem;
@@ -36,38 +40,6 @@
     
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
 
 - (void)addNewWonder
 {
@@ -78,5 +50,20 @@
     
 }
 
+#pragma Table View Data Source Delegate
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *wonderID = @"wonder";
+    UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:wonderID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:wonderID];
+    }
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+}
 
 @end

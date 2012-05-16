@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+NSString static *WONDERLIST = @"WonderList";
+NSString static *TEXT = @"text";
+NSString static *DATE = @"date";
 @interface AddNewWonderViewController : UIViewController<UITextFieldDelegate>
 @property (nonatomic,retain) UITextField *wonderTF;
 @end

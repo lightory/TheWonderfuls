@@ -8,6 +8,7 @@
 
 #import "AddNewWonderViewController.h"
 
+
 @implementation AddNewWonderViewController
 @synthesize wonderTF = _wonderTF;
 
@@ -65,15 +66,47 @@
 
 
 
-
 - (void)save
 {
     [_wonderTF resignFirstResponder];
     NSString *wonderText = _wonderTF.text;
-    NSString *wonderKey = [NSDate description];
-    [[NSUserDefaults standardUserDefaults] setObject:wonderText forKey:wonderKey];
-    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:wonderKey]);
+    NSString *wonderDate = [NSDate date];
+    
+    NSDictionary *wonder = [[NSDictionary alloc] initWithObjectsAndKeys:wonderText,TEXT,wonderDate,DATE, nil];
+    NSMutableArray *wonderList = [[[NSUserDefaults standardUserDefaults]objectForKey:WONDERLIST] mutableCopy];
+    if (wonderList == nil) {
+        wonderList = [[NSMutableArray alloc]initWithObjects:wonder, nil];
+    }
+    else
+        [wonderList addObject:wonder];
+    NSLog(@"Before set userdefaults: %@",[[NSUserDefaults standardUserDefaults]objectForKey:WONDERLIST]);
+    [[NSUserDefaults standardUserDefaults]setObject:wonderList forKey:WONDERLIST];
+    NSLog(@"After: %@",[[NSUserDefaults standardUserDefaults]objectForKey:WONDERLIST]);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddNewWonderViewController.h"
 
-@interface TheWonderfulsFirstViewController : UIViewController
+@interface TheWonderfulsFirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong) UITableView *wonderList;
 
 @end
